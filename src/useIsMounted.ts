@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef } from "react"
 
 /**
  * There's disagreement on how a `useIsMounted` hook should behave. Some believe its initial value should be `true` to
@@ -14,7 +14,7 @@ import { useEffect, useRef } from "react"
  *
  * @param initialValue - Whether or not the component should be considered mounted immediately or only once it's rendered on
  * the client. Defaults to `true`.
- * @returns Boolean representing if the component is currently mounted or not.
+ * @returns Ref containing the current boolean representing if the component is mounted or not.
  */
 const useIsMounted = (initialValue = true) => {
   const ref = useRef(initialValue)
@@ -26,7 +26,7 @@ const useIsMounted = (initialValue = true) => {
     }
   }, [])
 
-  return ref // TODO: memoize this
+  return ref
 }
 
 export default useIsMounted
