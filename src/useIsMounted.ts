@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react"
+import { useEffect, useRef } from "react"
 
 /**
  * There's disagreement on how a `useIsMounted` hook should behave. Some believe its initial value should be `true` to
