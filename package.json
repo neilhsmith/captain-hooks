@@ -1,0 +1,23 @@
+{
+  "name": "captain-hooks",
+  "version": "0.0.2",
+  "description": "A collection of React hooks",
+  "main": "index.js",
+  "scripts": {
+    "version:patch": "npm version patch --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neilhsmith/captain-hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "Neil Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neilhsmith/captain-hooks/issues"
+  },
+  "homepage": "https://github.com/neilhsmith/captain-hooks#readme"
+}
