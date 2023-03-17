@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react"
  * @param value - the value to store
  * @returns the value stored last render
  */
-export const usePrevious = <T>(value: T): T => {
+const usePrevious = <T>(value: T): T => {
   const ref = useRef(value)
 
   useEffect(() => {
@@ -15,3 +15,5 @@ export const usePrevious = <T>(value: T): T => {
 
   return ref.current
 }
+
+export default usePrevious

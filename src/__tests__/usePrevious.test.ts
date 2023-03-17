@@ -1,4 +1,4 @@
-import { usePrevious } from "../usePrevious"
+import usePrevious from "../usePrevious"
 
 describe("usePrevious", () => {
   it("should return the initialValue on first render", () => {
