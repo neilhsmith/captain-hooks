@@ -15,6 +15,25 @@ import { useEffect, useRef } from "react"
  * @param initialValue - Whether or not the component should be considered mounted immediately or only once it's rendered on
  * the client. Defaults to `true`.
  * @returns Ref containing the current boolean representing if the component is mounted or not.
+ * @example
+ * ```tsx
+ * const SomeComponent = () => {
+ *   const [data, setData] = useState()
+ *   const isMountedRef = useIsMounted()
+ *
+ *   useEffect(() => {
+ *     fetch('somedata.com')
+ *       .then(res => {
+ *         if (!isMountedRef.current)
+ *           return
+ *
+ *         setData(res
+ *       })
+ *   }, [])
+ *
+ *   return <pre>{data}</pre>
+ * }
+ * ```
  */
 const useIsMounted = (initialValue = true) => {
   const ref = useRef(initialValue)
