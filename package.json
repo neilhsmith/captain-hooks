@@ -1,10 +1,17 @@
 {
   "name": "captain-hooks",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A collection of React hooks",
   "main": "index.js",
   "scripts": {
-    "version:patch": "npm version patch --force"
+    "bump:patch": "npm version patch",
+    "bump:minor": "npm version minor",
+    "bump:major": "npm version major",
+    "format:check": "npx prettier --check .",
+    "format:write": "npx prettier --write .",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -19,5 +26,24 @@
   "bugs": {
     "url": "https://github.com/neilhsmith/captain-hooks/issues"
   },
-  "homepage": "https://github.com/neilhsmith/captain-hooks#readme"
+  "homepage": "https://github.com/neilhsmith/captain-hooks#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "@vitest/coverage-c8": "^0.29.3",
+    "@vitest/ui": "^0.29.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "jsdom": "^21.1.1",
+    "prettier": "2.8.4",
+    "typescript": "^5.0.2",
+    "vitest": "^0.29.3"
+  }
 }
