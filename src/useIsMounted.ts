@@ -6,8 +6,8 @@ import { useEffect, useMemo, useRef } from "react"
  * the browser in a `useEffect` callback.
  *
  * This hook does both using the `initialValue`. Pass `true` so it is treated as mounted during SSR and hydration and only
- * flips to false when unmounted. Otherwise pass `false` and it will flip to `true` when actually rendered in the client and
- * also will flip to `false` when unmounted.
+ * flips to false when unmounted. Otherwise pass `false` and it will flip to `true` when actually rendered in the client
+ * as well as flipping back to `false` when unmounted.
  *
  * But either way, this hook should flip to `false` when a component is unmounted so it can be used to avoid setting state at
  * the end of an async action after a component has been unmounted.
